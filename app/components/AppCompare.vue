@@ -77,11 +77,11 @@ const getContainerWidth = () => window.getComputedStyle(compareElement.value as 
 
 <style>
 :root {
-  --handle-bg: blue;
+  --handle-bg: #0ea5e9;
   --handle-width: 30px;
   --handle-height: 30px;
 
-  --handle-line-bg: blue;
+  --handle-line-bg: #0ea5e9;
   --handle-line-width: 2px;
   --handle-line-height: 100%;
 
@@ -136,9 +136,5 @@ const getContainerWidth = () => window.getComputedStyle(compareElement.value as 
   /* debugging purposes only */
   background: rgba(0, 0, 0, 0.4);
   opacity: 0;
-}
-
-.object-fit-cover {
-  object-fit: cover;
 }
 </style>

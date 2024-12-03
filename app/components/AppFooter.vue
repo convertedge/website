@@ -4,9 +4,9 @@ const links = [
     label: "Product",
     children: [
       { label: "Shortify", to: "/products/shortify", target: "_self" },
-      { label: "Uncover", to: "/products/uncover", target: "_self" },
-      { label: "Chrome extension", to: "/products/extension", target: "_blank" },
-      { label: "API", to: "/products/api", target: "_self" },
+      // { label: "Uncover", to: "/products/uncover", target: "_self" },
+      // { label: "Chrome extension", to: "/products/extension", target: "_blank" },
+      // { label: "API", to: "/products/api", target: "_self" },
     ],
   },
   {

@@ -2,13 +2,15 @@ title: Changelog
 subtitle:
 items:
   - title: Initial alpha
-    date: August 1, 2024
+    date: December 1, 2024
     # picture: /changelog/v001.png
-    description: Id laborum laboris duis nostrud excepteur ut velit nulla magna Lorem proident non.
+    description: Today we're launching the first alpha of convertedge.
+      <br/>Our first product called 'Shortify' and it's a simple way to make forms shorter, as short as possibly can, with the aim to boost your forms conversion rate. 'Shortify' can also enirch your forms with mroe data automatically and it's integrate with your current stack without doing anything expect adding few `data-` tags to your 'form' element.
+      <br/>It's a new way to experience forms, and we're excited to experience it with you! 💖
     version: 0.0.1
-    published: false
+    published: true
   - title: First beta version
-    date: September 2, 2024
+    date: December 20, 2024
     picture: /changelog/v001.png
     description: Id laborum laboris duis nostrud excepteur ut velit nulla magna Lorem proident non.
     version: 0.0.2

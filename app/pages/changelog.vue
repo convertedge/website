@@ -26,7 +26,7 @@ const { data } = await useAsyncData("changelog", () => queryContent("/changelog"
               <div class="py-2 px-4 ml-8 md:ml-40">
                 <h3 class="text-xl pb-1">{{ item.title }}</h3>
                 <img v-if="item.picture" :src="item.picture" class="w-full h-64 object-cover rounded-lg" />
-                <p class="text-gray-500">{{ item.description }}</p>
+                <p class="text-gray-500" v-html="item.description"></p>
               </div>
             </div>
           </div>
