@@ -1,0 +1,1 @@
+import{u as n}from"./BrPaE6GD.js";import{q as r}from"./B8--atcF.js";import{d as a,I as o,r as s,c as i,e as c}from"./D1CF-rGY.js";import"./DNwkpLAX.js";const g=a({__name:"pricing",async setup(p){let e,t;return[e,t]=o(()=>n("pricing",()=>r("/pricing").findOne())),e=await e,t(),s(!1),(m,_)=>(i(),c("p",null,"pricing"))}});export{g as default};
