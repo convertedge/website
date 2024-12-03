@@ -1,0 +1,40 @@
+title: Convertedge -
+description: Nuxt UI Pro is a collection of premium Vue components built on top of Nuxt UI to create beautiful & responsive Nuxt applications in minutes.
+usecases:
+  title: We got you cover for every use case
+  items:
+    - label: Contact us
+      icon: i-heroicons-chat-bubble-left-right
+    - label: Newsletters
+      icon: i-heroicons-newspaper
+    - label: Book a demo
+      icon: i-heroicons-bookmark
+    - label: Platform sign up
+      icon: i-heroicons-identification
+    - label: Events registration
+      icon: i-heroicons-calendar-days
+features:
+  title: The engine that scales and grows your business to the next level
+  items:
+    - title: Blazingly fast
+      description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. In gravida justo et nulla efficitur, maximus egestas sem pellentesque.
+      image: https://tailwindui.com/plus/img/component-images/bento-01-performance.png
+    - title: Automatic enrichment
+      description: Curabitur auctor, ex quis auctor venenatis, eros arcu rhoncus massa, laoreet dapibus ex elit vitae odio.
+      image: https://tailwindui.com/plus/img/component-images/bento-01-releases.png
+    - title: Amazingly flexible
+      description: Sed congue eros non finibus molestie. Vestibulum euismod augue.
+      image: https://tailwindui.com/plus/img/component-images/bento-01-speed.png
+    - title: Integrate with every tool
+      description: Maecenas at augue sed elit dictum vulputate, in nisi aliquam maximus arcu.
+      image: https://tailwindui.com/plus/img/component-images/bento-01-integrations.png
+    - title: Real-time reporting
+      description: Aenean vulputate justo commodo auctor vehicula in malesuada semper.
+      image: https://tailwindui.com/plus/img/component-images/bento-01-network.png
+cta:
+  title: Boost your conversion rate.
+  subtitle: Start using Shortify today.
+  link:
+    label: Get started
+    color: black
+    to: https://app.convertedge.co/login

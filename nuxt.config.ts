@@ -1,66 +1,36 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  extends: ['@nuxt/ui-pro'],
-
-  modules: [
-    '@nuxt/content',
-    '@nuxt/eslint',
-    '@nuxt/fonts',
-    '@nuxt/image',
-    '@nuxt/ui',
-    '@nuxthq/studio',
-    '@vueuse/nuxt',
-    'nuxt-og-image'
-  ],
-
-  hooks: {
-    // Define `@nuxt/ui` components as global to use them in `.md` (feel free to add those you need)
-    'components:extend': (components) => {
-      const globals = components.filter(c => ['UButton'].includes(c.pascalName))
-
-      globals.forEach(c => c.global = true)
-    }
-  },
-
-  colorMode: {
-    disableTransition: true
-  },
-
+  modules: ["@nuxt/content", "@nuxt/fonts", "@nuxt/image", "@nuxt/ui", "@nuxthq/studio", "@nuxtjs/sitemap", "@nuxtjs/seo", "nuxt-og-image"],
   nitro: {
     prerender: {
-      routes: [
-        '/',
-        '/docs'
-      ],
-      crawlLinks: true
-    }
+      routes: ["/"],
+      crawlLinks: true,
+    },
   },
-
-  routeRules: {
-    '/api/search.json': { prerender: true },
-    '/docs': { redirect: '/docs/getting-started', prerender: false }
-  },
-
   devtools: {
-    enabled: true
+    enabled: true,
   },
-
+  colorMode: {
+    preference: "light",
+  },
   typescript: {
-    strict: false
+    strict: false,
   },
-
   future: {
-    compatibilityVersion: 4
+    compatibilityVersion: 4,
   },
-
-  eslint: {
-    config: {
-      stylistic: {
-        commaDangle: 'never',
-        braceStyle: '1tbs'
-      }
-    }
+  compatibilityDate: "2024-07-11",
+  robots: {
+    disallow: [],
+    allow: "*",
   },
-
-  compatibilityDate: '2024-07-11'
-})
+  site: {
+    url: "https://convertedge.co",
+    name: "Convertedge",
+    description: "Skyrocket your conversion rate",
+    defaultLocale: "en",
+  },
+  sitemap: {
+    strictNuxtContentPaths: true,
+  },
+});
