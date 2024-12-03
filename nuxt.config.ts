@@ -7,10 +7,10 @@ export default defineNuxtConfig({
       posthogHost: "https://us.i.posthog.com",
     },
   },
-  nitro: {
-    prerender: {
-      routes: ["/"],
-      crawlLinks: true,
+  ssr: false,
+  content: {
+    experimental: {
+      clientDB: true,
     },
   },
   devtools: {
@@ -27,9 +27,6 @@ export default defineNuxtConfig({
   },
   compatibilityDate: "2024-07-11",
   site: {
-    url: "https://convertedge.co",
-    name: "Convertedge",
-    description: "Skyrocket your conversion rate",
-    defaultLocale: "en",
+    url: "convertedge.co",
   },
 });
