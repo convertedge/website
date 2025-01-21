@@ -1,1 +1,0 @@
-import{_ as o}from"./DlAUqK2U.js";import{c as t,e as r,D as c}from"./BAJ7vy37.js";const s={};function n(e,a){return t(),r("blockquote",null,[c(e.$slots,"default")])}const f=Object.assign(o(s,[["render",n]]),{__name:"ProseBlockquote"});export{f as default};
