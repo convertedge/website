@@ -10,27 +10,22 @@ useSeoMeta({
 </script>
 
 <template>
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
     <div class="absolute inset-0 landing-grid z-[-1] [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" />
-    <h2 class="text-5xl sm:text-7xl font-bold tracking-tight text-center text-gray-900">
-      Unlock your potential and<br /><span class="bg-clip-text text-transparent bg-gradient-to-r from-primary-900 to-primary-300">boost your conversion</span>
+    <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-center text-gray-900">
+      Shorten & enrich any form!<br class="hidden sm:block" /><span
+        class="ml-1 sm:ml-0 bg-clip-text text-transparent bg-gradient-to-r from-primary-900 to-primary-300"
+        >Boost conversion</span
+      >
+      of any page
     </h2>
-    <h3 class="text-2xl text-center tracking-tight text-gray-700 mt-5">Turn opportunities into outcomes and harness the power of every interaction</h3>
+    <h3 class="text-lg sm:text-2xl text-center tracking-tight text-gray-600 mt-5">
+      {{ data.subtitle }}
+    </h3>
   </div>
 
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-    <AppCompare>
-      <template #first>
-        <div class="flex size-full justify-center items-center bg-gray-50 h-[30rem]">
-          <span class="text-4xl font-bold text-gray-950">☀️ Day</span>
-        </div>
-      </template>
-      <template #second>
-        <div class="flex size-full justify-center items-center bg-gray-50 h-[30rem]">
-          <span class="text-4xl font-bold text-gray-950">🌙 Night</span>
-        </div>
-      </template>
-    </AppCompare>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+    <div class="bg-gray-100 rounded-md h-[32rem] w-full"></div>
   </div>
 
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">

@@ -1,7 +1,8 @@
 title: Convertedge
 description: Skyrocket your conversion rate.
+subtitle: Simple, no-code installation to automatically shorten and enrich any form. Got 5 mins? Let’s go
 usecases:
-  title: We got you cover for every use case
+  title: You decide what's <span class='underline'>visible</span> and what's <span class='underline'>automatically enriched</span>
   items:
     - label: Contact us
       icon: i-heroicons-chat-bubble-left-right
@@ -11,23 +12,23 @@ usecases:
       icon: i-heroicons-bookmark
     - label: Platform sign up
       icon: i-heroicons-identification
-    - label: Events registration
+    - label: Event registration
       icon: i-heroicons-calendar-days
 features:
   title: The engine that scales and grows your business to the next level
   items:
-    - title: Blazingly fast
-      description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. In gravida justo et nulla efficitur, maximus egestas sem pellentesque.
+    - title: Shorter forms - higher conversion rates
+      description: Lower the barrier by only requiring email and gain up to 42% conversion rates uplift! With more leads and lower CPLs.
       image: https://tailwindui.com/plus/img/component-images/bento-01-performance.png
-    - title: Automatic enrichment
-      description: Curabitur auctor, ex quis auctor venenatis, eros arcu rhoncus massa, laoreet dapibus ex elit vitae odio.
+    - title: Automated form enrichment
+      description: Automatically enrich a lead’s data in the background & submitted directly to your CRM. Works seamlessly with no marketing ops needed.
       image: https://tailwindui.com/plus/img/component-images/bento-01-releases.png
-    - title: Amazingly flexible
-      description: Sed congue eros non finibus molestie. Vestibulum euismod augue.
-      image: https://tailwindui.com/plus/img/component-images/bento-01-speed.png
-    - title: Integrate with every tool
-      description: Maecenas at augue sed elit dictum vulputate, in nisi aliquam maximus arcu.
-      image: https://tailwindui.com/plus/img/component-images/bento-01-integrations.png
+    - title: Built with simplicity in mind
+      description: No need for revops, APIs or tech installation. Take a script tag, place it on your tag manager, and that’s it.
+      image: /features/gtm-script.webp
+    - title: One tag to shorten & enrich them all
+      description: Hubspot, Marketo, Webflow, Wordpress and more, it works on any form, any CRM. One tag.
+      image: /features/integrations.webp
     - title: Real-time reporting
       description: Aenean vulputate justo commodo auctor vehicula in malesuada semper.
       image: https://tailwindui.com/plus/img/component-images/bento-01-network.png
@@ -37,4 +38,4 @@ cta:
   link:
     label: Get started
     color: black
-    to: https://app.convertedge.co/login
+    to: https://app.convertedge.co/auth/register

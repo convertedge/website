@@ -3,9 +3,9 @@ const links = [
   // {
   //   label: "Products",
   //   children: [
-  //     { label: "Shortify", to: "/products/shortify", icon: "i-heroicons-table-cells", description: "Skyrocket your forms conversion rate" },
-  //     { label: "Uncover", to: "/products/uncover", icon: "i-heroicons-identification", description: "Unveil visitors and take actions" },
-  //     { label: "Chrome extension", to: "/products/extension", icon: "i-heroicons-window", description: "Know who you meeting and win them" },
+  //     { label: "Shortify", to: "/products/shortify", icon: "i-heroicons-table-cells", description: "Shorten & enrich any form" },
+  //     { label: "Uncover", to: "/products/uncover", icon: "i-heroicons-identification", description: "Unveil anon visitors and take actions" },
+  //     { label: "Meetprep", to: "/products/extension", icon: "i-heroicons-window", description: "Know who you meet and win them" },
   //     { label: "API", to: "/products/api", icon: "i-heroicons-code-bracket", description: "Intergrate our data to your product" },
   //   ],
   // },
@@ -31,7 +31,7 @@ const resetNav = () => {
 
 <template>
   <header class="sticky top-0 w-full bg-background/75 backdrop-blur z-10 border-b border-gray-100">
-    <nav class="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between py-4 px-6 2xl:px-0">
       <div class="flex lg:flex-1 text-xl font-bold">
         <a href="/" class="flex items-center gap-2">
           <UIcon name="i-heroicons-cube-transparent" class="w-7 h-7" />
@@ -75,8 +75,8 @@ const resetNav = () => {
         </span>
       </div>
       <div class="hidden lg:flex flex-1 justify-end gap-2">
-        <UButton label="Sign in" color="gray" to="https://app.convertedge.co/login" />
-        <UButton label="Sign up" icon="i-heroicons-arrow-right-20-solid" trailing color="black" to="https://app.convertedge.co/register" class="" />
+        <UButton label="Sign in" color="gray" to="https://app.convertedge.co/auth/login" />
+        <UButton label="Sign up" icon="i-heroicons-arrow-right-20-solid" trailing color="black" to="https://app.convertedge.co/auth/register" />
       </div>
     </nav>
   </header>
