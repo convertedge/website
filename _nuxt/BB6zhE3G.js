@@ -1,0 +1,1 @@
+import{d as n,L as o}from"./Cs4Jp0lk.js";const e=n({name:"DocumentDrivenNotFound",render(){return o("div","Document not found")}}),m=Object.assign(e,{__name:"DocumentDrivenNotFound"});export{m as default};
