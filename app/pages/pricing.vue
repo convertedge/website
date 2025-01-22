@@ -21,15 +21,17 @@ const total = computed(() => {
 
     <div class="grid lg:grid-cols-12 max-w-screen-2xl rounded-md ring-1 ring-gray-300 mx-auto">
       <div class="p-8 lg:col-span-9">
-        <div class="hidden sm:flex flex-col gap-4">
-          <div class="flex items-center gap-4">
+        <div class="flex flex-col gap-4">
+          <div class="sm:flex items-center gap-4">
             <p class="text-gray-500">Submissions</p>
-            <URange size="sm" :min="0" :step="1" :max="1000" v-model="submissions" />
-            <UInput v-model="submissions" placeholder="Number of monthly req" type="number"> </UInput>
+            <span class="flex items-center gap-4 w-full">
+              <URange size="sm" :min="0" :step="1" :max="1000" v-model="submissions" />
+              <UInput v-model="submissions" placeholder="Number of monthly req" type="number"> </UInput>
+            </span>
           </div>
         </div>
 
-        <div class="mt-10 flex items-center gap-x-4">
+        <div class="mt-8 sm:mt-10 flex items-center gap-x-4">
           <h4 class="text-sm font-semibold text-primary-500">{{ data.perks.title }}</h4>
           <div class="h-px flex-auto bg-gray-300"></div>
         </div>
@@ -47,11 +49,12 @@ const total = computed(() => {
         </ul>
       </div>
 
-      <div class="lg:col-span-3 rounded-r-md bg-gray-100 flex flex-col justify-around items-center gap-4 px-8 space-y-4 lg:space-y-0 py-8 lg:py-0">
+      <div class="lg:col-span-3 rounded-r-md bg-gray-100 flex flex-col justify-around items-center gap-4 px-8 space-y-4 lg:space-y-0 py-8">
         <div>
           <p class="flex items-end justify-center gap-x-2">
             <span class="text-4xl font-bold tracking-tight">{{ total == "Contact us" ? total : `${formatter.format(Number(total))}` }}</span>
           </p>
+          <p class="text-gray-500 text-sm">$0.5 pre request</p>
         </div>
         <UButton label="Start now" to="https://app.convertedge.co/auth/register" target="_blank" block />
       </div>

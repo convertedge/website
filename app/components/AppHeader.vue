@@ -4,9 +4,9 @@ const links = [
   //   label: "Products",
   //   children: [
   //     { label: "Shortify", to: "/products/shortify", icon: "i-heroicons-table-cells", description: "Shorten & enrich any form" },
-  //     { label: "Uncover", to: "/products/uncover", icon: "i-heroicons-identification", description: "Unveil anon visitors and take actions" },
+  //     { label: "Uncover", to: "/products/uncover", icon: "i-heroicons-identification", description: "Identify anon visitors and take actions" },
   //     { label: "Meetprep", to: "/products/extension", icon: "i-heroicons-window", description: "Know who you meet and win them" },
-  //     { label: "API", to: "/products/api", icon: "i-heroicons-code-bracket", description: "Intergrate our data to your product" },
+  //     { label: "API", to: "/products/api", icon: "i-heroicons-code-bracket", description: "Intergrate our data to your system" },
   //   ],
   // },
   { label: "Pricing", to: "/pricing", children: [] },
@@ -26,6 +26,7 @@ const resetNav = () => {
   for (const navLink of allNavLinks) {
     navLink.classList.remove("text-slate-400");
   }
+  mobile.value = false;
 };
 </script>
 
@@ -83,13 +84,16 @@ const resetNav = () => {
 
   <!-- Mobile menu, show/hide based on menu open state. -->
   <div :class="[mobile ? 'lg:hidden' : 'hidden']">
-    <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto px-6 py-6 sm:max-w-60 bg-gray-50">
-      <div class="flex items-center justify-between">
+    <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto px-6 py-4 sm:max-w-60 bg-gray-50">
+      <div class="flex items-center justify-end">
         <UButton icon="i-heroicons-x-mark" size="sm" color="gray" square variant="ghost" @click="mobile = !mobile" />
       </div>
       <div>
         <div class="divide-y divide-gray-300">
           <div class="space-y-2 py-6 flex flex-col">
+            <ULink to="/" :class="[currentPath == '' ? 'text-primary-500' : 'text-gray-900 hover:text-primary-500', 'font-medium']" @click="resetNav"
+              >Home</ULink
+            >
             <ULink
               v-for="(link, index) of links"
               :key="index"

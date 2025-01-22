@@ -24,8 +24,8 @@ useSeoMeta({
     </h3>
   </div>
 
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-    <div class="bg-gray-100 rounded-md h-[32rem] w-full"></div>
+  <div class="max-w-7xl 2xl:max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+    <AppHowItWorks :title="data.howitworks" />
   </div>
 
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">

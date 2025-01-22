@@ -1,6 +1,6 @@
 faq:
   title: Frequently asked questions
-  description: Can’t find the answer you’re looking for? Reach out to our <a href="#" class="font-semibold text-sky-600 hover:text-sky-500">customer support</a> team.
+  description: Can’t find the answer you’re looking for? Reach out to our <a href="/help" class="font-semibold text-sky-600 hover:text-sky-500">customer support</a> team.
   items:
     - label: Does Convertege work with any form type?
       content: Generally yes. We work with the main marketing automations and CRM forms - like Hubspot, Marketo, Pardot, Eloqua, and with the main CMS forms like Wordpress, Webflow, Wix etc. It may not work well with other form shortening services like Typeform. Not sure it works? You can test it very simply or ask us.

@@ -1,6 +1,6 @@
 title: Convertedge
-description: Skyrocket your conversion rate.
-subtitle: Simple, no-code installation to automatically shorten and enrich any form. Got 5 mins? Let’s go
+subtitle: Simple, no-code installation to automatically shorten and enrich any form.
+howitworks: How to increase your conversion rates by 42% in 5 minutes?
 usecases:
   title: You decide what's <span class='underline'>visible</span> and what's <span class='underline'>automatically enriched</span>
   items:
@@ -25,16 +25,14 @@ features:
       image: https://tailwindui.com/plus/img/component-images/bento-01-releases.png
     - title: Built with simplicity in mind
       description: No need for revops, APIs or tech installation. Take a script tag, place it on your tag manager, and that’s it.
-      image: /features/gtm-script.webp
     - title: One tag to shorten & enrich them all
       description: Hubspot, Marketo, Webflow, Wordpress and more, it works on any form, any CRM. One tag.
-      image: /features/integrations.webp
     - title: Real-time reporting
       description: Aenean vulputate justo commodo auctor vehicula in malesuada semper.
       image: https://tailwindui.com/plus/img/component-images/bento-01-network.png
 cta:
   title: Boost your conversion rate.
-  subtitle: Start using Shortify today.
+  subtitle: Start using Shortify today!
   link:
     label: Get started
     color: black

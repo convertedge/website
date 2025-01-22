@@ -1,11 +1,11 @@
 <script setup lang="ts">
 const links = [
   {
-    label: "Product",
+    label: "Products",
     children: [
-      { label: "Shortify", to: "/products/shortify", target: "_self" },
+      // { label: "Shortify", to: "/products/shortify", target: "_self" },
       // { label: "Uncover", to: "/products/uncover", target: "_self" },
-      // { label: "Chrome extension", to: "/products/extension", target: "_blank" },
+      // { label: "Meetprep", to: "/products/extension", target: "_blank" },
       // { label: "API", to: "/products/api", target: "_self" },
     ],
   },
@@ -37,7 +37,7 @@ function onSubmit() {
   setTimeout(() => {
     toast.add({
       title: "Subscribed!",
-      description: "You've been subscribed to our newsletter.",
+      description: "You've been subscribed to our changelog.",
     });
 
     loading.value = false;
