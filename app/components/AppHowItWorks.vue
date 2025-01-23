@@ -15,7 +15,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="p-4 bg-gray-100 rounded-md">
+  <div class="p-4 bg-white ring-1 ring-gray-100 rounded-md">
     <h2 class="pb-2 2xl:pb-4 text-center text-xl sm:text-2xl lg:text-3xl font-medium text-gray-950">{{ title }}</h2>
 
     <div class="flex flex-col 2xl:grid 2xl:grid-cols-3 gap-2 2xl:gap-4">

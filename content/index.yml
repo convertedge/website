@@ -1,6 +1,6 @@
 title: Convertedge
 subtitle: Simple, no-code installation to automatically shorten and enrich any form.
-howitworks: How to increase your conversion rates by 42% in 5 minutes?
+howitworks: Increase your conversion rates by 42% in 5 minutes
 usecases:
   title: You decide what's <span class='underline'>visible</span> and what's <span class='underline'>automatically enriched</span>
   items:
@@ -15,21 +15,19 @@ usecases:
     - label: Event registration
       icon: i-heroicons-calendar-days
 features:
-  title: The engine that scales and grows your business to the next level
+  title: The only purpose-built tool to boost your form conversion rate
   items:
     - title: Shorter forms - higher conversion rates
       description: Lower the barrier by only requiring email and gain up to 42% conversion rates uplift! With more leads and lower CPLs.
       image: https://tailwindui.com/plus/img/component-images/bento-01-performance.png
     - title: Automated form enrichment
       description: Automatically enrich a lead’s data in the background & submitted directly to your CRM. Works seamlessly with no marketing ops needed.
-      image: https://tailwindui.com/plus/img/component-images/bento-01-releases.png
     - title: Built with simplicity in mind
       description: No need for revops, APIs or tech installation. Take a script tag, place it on your tag manager, and that’s it.
     - title: One tag to shorten & enrich them all
       description: Hubspot, Marketo, Webflow, Wordpress and more, it works on any form, any CRM. One tag.
     - title: Real-time reporting
-      description: Aenean vulputate justo commodo auctor vehicula in malesuada semper.
-      image: https://tailwindui.com/plus/img/component-images/bento-01-network.png
+      description: The insights you want, and those you didn't know you needed.
 cta:
   title: Boost your conversion rate.
   subtitle: Start using Shortify today!

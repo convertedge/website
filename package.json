@@ -17,6 +17,8 @@
     "@nuxt/image": "^1.8.1",
     "@nuxt/ui": "^2.19.2",
     "@nuxtjs/seo": "^2.0.2",
+    "@unovis/ts": "^1.5.0",
+    "@unovis/vue": "^1.5.0",
     "nuxt": "^3.13.2",
     "posthog-js": "^1.194.3"
   },
@@ -24,6 +26,7 @@
     "@nuxthq/studio": "^2.1.1",
     "commitizen": "^4.3.1",
     "eslint": "^9.13.0",
+    "tailwindcss-motion": "^1.0.1",
     "vue-tsc": "^2.1.6"
   },
   "config": {

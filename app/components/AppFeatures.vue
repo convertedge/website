@@ -1,7 +1,9 @@
 <script setup lang="ts">
+import AppShorter from "@/components/features/AppShorter.vue";
 import AppEnrichment from "@/components/features/AppEnrichment.vue";
 import AppIntegrations from "@/components/features/AppIntegrations.vue";
 import AppSimplicity from "@/components/features/AppSimplicity.vue";
+import AppMap from "@/components/features/AppMap.vue";
 
 defineProps({
   data: {
@@ -14,22 +16,11 @@ const featuresCardsRefs: Ref<HTMLElement> = useTemplateRef("features-cards");
 
 onMounted(() => {
   window.addEventListener("resize", () => (width.value = window?.innerWidth));
-  console.log("featuresCardsRefs", featuresCardsRefs);
 });
-
-// const enrichmentCardElm: Ref<HTMLElement> = useTemplateRef("enrichment-card");
-// onMounted(() => {
-//   enrichmentCardElm.value.addEventListener("mouseenter", () => {
-//     console.log("enter");
-//   });
-//   enrichmentCardElm.value.addEventListener("mouseout", () => {
-//     console.log("leave");
-//   });
-// });
 </script>
 
 <template>
-  <h3 class="mb-4 sm:mb-6 lg:mb-8 text-pretty font-semibold tracking-tight text-gray-950 text-3xl md:text-4xl lg:text-5xl w-4/5">
+  <h3 class="mb-4 sm:mb-6 lg:mb-8 text-pretty font-semibold text-gray-950 text-3xl md:text-4xl lg:text-5xl text-center">
     {{ data.title }}
   </h3>
 
@@ -44,8 +35,9 @@ onMounted(() => {
           'relative flex h-full flex-col overflow-hidden rounded-md ring-1 ring-gray-200',
         ]"
       >
-        <!-- <img class="h-80 object-cover object-left" :src="item.image" alt="" /> -->
-        <img v-if="![1, 2, 3].includes(index)" class="h-80 object-cover object-left" :src="item.image" alt="" />
+        <div v-if="index == 0" class="h-80">
+          <AppShorter :element="featuresCardsRefs?.[index]" :width="width" />
+        </div>
         <div v-if="index == 1" class="h-80">
           <AppEnrichment :element="featuresCardsRefs?.[index]" :width="width" />
         </div>
@@ -55,7 +47,10 @@ onMounted(() => {
         <div v-if="index == 3" class="h-80">
           <AppIntegrations :element="featuresCardsRefs?.[index]" />
         </div>
-        <div class="p-10 pt-4">
+        <div v-if="index == 4" class="h-80">
+          <AppMap :element="featuresCardsRefs?.[index]" />
+        </div>
+        <div class="p-6 sm:p-10 pt-4">
           <p class="text-lg font-medium text-gray-950">{{ item.title }}</p>
           <p class="mt-2 text-sm text-gray-600">{{ item.description }}</p>
         </div>
