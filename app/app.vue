@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const { data } = await useAsyncData("index", () => queryContent("/").findOne());
+
 useHead({
   meta: [
     { charset: "utf-8" },
@@ -12,10 +14,21 @@ useHead({
 });
 
 useSeoMeta({
-  titleTemplate: "Convertedge - increase your conversion rates",
-  ogImage: "https://saas-template.nuxt.dev/social-card.png",
-  twitterImage: "https://saas-template.nuxt.dev/social-card.png",
+  titleTemplate: "%s",
+  ogSiteName: "Convertedge",
+  title: data?.value?.title,
+  ogTitle: data?.value?.title,
+  twitterTitle: data?.value?.title,
+  description: data?.value?.subtitle,
+  ogDescription: data?.value?.subtitle,
+  twitterDescription: data?.value?.subtitle,
+  ogImage: "https://convertedge.co/social-card.png",
+  twitterImage: "https://convertedge.co/social-card.png",
   twitterCard: "summary_large_image",
+  ogImageType: "image/png",
+  ogUrl: "https://convertedge.co",
+  twitterCreator: "@nirgn975",
+  twitterSite: "@nirgn975",
 });
 </script>
 
