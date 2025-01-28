@@ -7,7 +7,7 @@ export default defineNuxtConfig({
       posthogHost: "https://us.i.posthog.com",
     },
   },
-  ssr: false,
+  ssr: true,
   content: {
     experimental: {
       clientDB: true,
