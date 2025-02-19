@@ -25,6 +25,7 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
+  // ogImage: { enabled: false },
   compatibilityDate: "2024-07-11",
   site: {
     url: "convertedge.co",
