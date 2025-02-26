@@ -8,7 +8,7 @@ const formatter = new Intl.NumberFormat("en-US", { style: "currency", currency: 
 
 const total = computed(() => {
   if (submissions.value < 1000) {
-    return submissions.value * 0.5;
+    return submissions.value * 0.75;
   } else {
     return "Contact us";
   }
@@ -54,7 +54,7 @@ const total = computed(() => {
           <p class="flex items-end justify-center gap-x-2">
             <span class="text-4xl font-bold tracking-tight">{{ total == "Contact us" ? total : `${formatter.format(Number(total))}` }}</span>
           </p>
-          <p class="text-gray-500 text-sm">$0.5 pre request</p>
+          <p class="text-gray-500 text-sm">$0.75 per successful enrich</p>
         </div>
         <UButton label="Start now" to="https://app.convertedge.co/auth/register" target="_blank" block />
       </div>
