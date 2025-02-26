@@ -11,10 +11,7 @@ const links = [
   },
   {
     label: "Resources",
-    children: [
-      { label: "Changelog", to: "/changelog", target: "_self" },
-      { label: "Help center", to: "/help", target: "_self" },
-    ],
+    children: [{ label: "Help center", to: "/help", target: "_self" }],
   },
   {
     label: "Company",
