@@ -45,6 +45,10 @@ const { data } = await useAsyncData("index", () => queryContent("/").findOne());
       </div>
     </div>
   </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-">
+    <AppFaq type="closed" />
+  </div>
 </template>
 
 <style scoped>

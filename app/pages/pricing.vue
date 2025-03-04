@@ -1,9 +1,7 @@
 <script setup lang="ts">
 const { data } = await useAsyncData("pricing", () => queryContent("/pricing").findOne());
-const { data: faqData } = await useAsyncData("faq", () => queryContent("/faq").findOne());
 
 const submissions = ref(100);
-
 const formatter = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", minimumFractionDigits: 0, maximumFractionDigits: 0 });
 
 const total = computed(() => {
@@ -60,19 +58,6 @@ const total = computed(() => {
       </div>
     </div>
 
-    <div class="lg:grid lg:grid-cols-12 lg:gap-8 mt-32">
-      <div class="lg:col-span-5">
-        <h2 class="text-pretty text-3xl font-semibold tracking-tight sm:text-4xl">{{ faqData.faq.title }}</h2>
-        <p class="mt-4 text-gray-600" v-html="faqData.faq.description"></p>
-      </div>
-      <div class="mt-10 lg:col-span-7 lg:mt-0">
-        <dl class="space-y-10">
-          <div v-for="(item, index) of faqData.faq.items" :key="index">
-            <dt class="font-semibold">{{ item.label }}</dt>
-            <dd class="mt-2 text-gray-600">{{ item.content }}</dd>
-          </div>
-        </dl>
-      </div>
-    </div>
+    <AppFaq />
   </div>
 </template>
