@@ -81,9 +81,16 @@ function onSubmit() {
       <p class="text-gray-500 text-sm">Copyright © {{ new Date().getFullYear() }}. All rights reserved.</p>
 
       <div class="flex gap-2 items-center">
-        <!-- <UButton to="https://github.com/nuxt-ui-pro/saas" target="_blank" icon="i-simple-icons-x" aria-label="X" color="gray" variant="ghost" />
-        <UButton to="https://github.com/nuxt-ui-pro/saas" target="_blank" icon="i-simple-icons-linkedin" aria-label="LinkedIn" color="gray" variant="ghost" />
-        <UButton to="https://github.com/nuxt-ui-pro/saas" target="_blank" icon="i-simple-icons-youtube" aria-label="YouTube" color="gray" variant="ghost" /> -->
+        <!-- <UButton to="https://github.com/nuxt-ui-pro/saas" target="_blank" icon="i-simple-icons-x" aria-label="X" color="gray" variant="ghost" /> -->
+        <UButton
+          to="https://www.linkedin.com/company/convertedge-co"
+          target="_blank"
+          icon="i-simple-icons-linkedin"
+          aria-label="LinkedIn"
+          color="gray"
+          variant="ghost"
+        />
+        <!-- <UButton to="https://github.com/nuxt-ui-pro/saas" target="_blank" icon="i-simple-icons-youtube" aria-label="YouTube" color="gray" variant="ghost" /> -->
         <UButton to="https://github.com/convertedge" target="_blank" icon="i-simple-icons-github" aria-label="GitHub" color="gray" variant="ghost" />
       </div>
     </div>
