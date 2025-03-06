@@ -21,13 +21,43 @@ defineProps({
       <p class="text-center font-medium mb-1 text-sm sm:text-base">Your form</p>
       <div class="space-y-2 bg-white ring-1 ring-gray-200 p-2 rounded-xl">
         <UFormGroup label="Email" required v-if="fields.includes('email')">
-          <UInput placeholder="you@example.com" icon="i-heroicons-envelope" :size="width >= 640 ? 'sm' : 'xs'" />
+          <UInput placeholder="you@example.com" :size="width >= 640 ? 'sm' : 'xs'">
+            <template #leading>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 text-gray-500">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
+                />
+              </svg>
+            </template>
+          </UInput>
         </UFormGroup>
         <UFormGroup label="Password" required v-if="fields.includes('password')">
-          <UInput placeholder="********" icon="i-heroicons-eye-slash" :size="width >= 640 ? 'sm' : 'xs'" />
+          <UInput placeholder="********" :size="width >= 640 ? 'sm' : 'xs'">
+            <template #leading>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 text-gray-500">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.98 8.223A10.477 10.477 0 0 0 1.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.451 10.451 0 0 1 12 4.5c4.756 0 8.773 3.162 10.065 7.498a10.522 10.522 0 0 1-4.293 5.774M6.228 6.228 3 3m3.228 3.228 3.65 3.65m7.894 7.894L21 21m-3.228-3.228-3.65-3.65m0 0a3 3 0 1 0-4.243-4.243m4.242 4.242L9.88 9.88"
+                />
+              </svg>
+            </template>
+          </UInput>
         </UFormGroup>
         <UFormGroup label="Company name" required v-if="fields.includes('company')">
-          <UInput placeholder="Apple" icon="i-heroicons-building-office" :size="width >= 640 ? 'sm' : 'xs'" />
+          <UInput placeholder="Apple" :size="width >= 640 ? 'sm' : 'xs'">
+            <template #leading>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 text-gray-500">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"
+                />
+              </svg>
+            </template>
+          </UInput>
         </UFormGroup>
         <UFormGroup label="How can we help?" required v-if="fields.includes('message')">
           <UTextarea

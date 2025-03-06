@@ -5,15 +5,15 @@ usecases:
   title: You decide what's <span class='underline'>visible</span> and what's <span class='underline'>automatically enriched</span>
   items:
     - label: Contact us
-      icon: i-heroicons-chat-bubble-left-right
+      icon: chat-bubble-left-right
     - label: Newsletters
-      icon: i-heroicons-newspaper
+      icon: newspaper
     - label: Book a demo
-      icon: i-heroicons-bookmark
+      icon: bookmark
     - label: Platform sign up
-      icon: i-heroicons-identification
+      icon: identification
     - label: Event registration
-      icon: i-heroicons-calendar-days
+      icon: calendar-days
 features:
   title: The only purpose-built tool to boost your form conversion rate
   items:
