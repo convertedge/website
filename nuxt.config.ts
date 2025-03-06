@@ -6,7 +6,7 @@ export default defineNuxtConfig({
       posthogPublicKey: "phc_5QgLffNba5CNwWs5d9ag3zGLiptTe3Bxiq1MNcj9j0m",
       posthogHost: "https://us.i.posthog.com",
       gtm: {
-        id: "GTM-NJJ9WMG9",
+        id: "GTM-TZSSN6L2",
       },
     },
   },
