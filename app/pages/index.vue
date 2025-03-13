@@ -17,12 +17,8 @@ const { data } = await useAsyncData("index", () => queryContent("/").findOne());
     </h3>
   </div>
 
-  <div class="max-w-7xl 2xl:max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-    <AppHowItWorks :title="data.howitworks" />
-  </div>
-
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-    <AppLogos />
+    <AppLogos :title="data.logos" />
   </div>
 
   <div class="bg-gray-100 rounded-2xl mx-4">

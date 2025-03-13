@@ -11,7 +11,10 @@ const links = [
   },
   {
     label: "Resources",
-    children: [{ label: "Help center", to: "/help", target: "_self" }],
+    children: [
+      // { label: "Help center", to: "/help", target: "_self" },
+      { label: "How it work", to: "/how-it-work", target: "_self" },
+    ],
   },
   {
     label: "Company",

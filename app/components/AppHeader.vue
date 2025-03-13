@@ -10,6 +10,7 @@ const links = [
   //   ],
   // },
   { label: "Pricing", to: "/pricing", children: [] },
+  { label: "How it work", to: "/how-it-work", children: [] },
 ];
 
 const route = useRoute();
