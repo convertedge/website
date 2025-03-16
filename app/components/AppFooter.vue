@@ -13,7 +13,8 @@ const links = [
     label: "Resources",
     children: [
       // { label: "Help center", to: "/help", target: "_self" },
-      { label: "How it work", to: "/how-it-work", target: "_self" },
+      { label: "How it works", to: "/how-it-works", target: "_self" },
+      { label: "Playground", to: "/playground-shortify", target: "_self" },
     ],
   },
   {

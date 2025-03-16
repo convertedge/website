@@ -1,45 +1,10 @@
 <script setup lang="ts">
 const shortifyInputs = [
-  { tag: "input", selector_name: "id", selector_value: "first-name", error: "field" },
-  { tag: "input", selector_name: "id", selector_value: "last-name", error: "field" },
-  { tag: "input", selector_name: "id", selector_value: "company", error: "field" },
-  { tag: "input", selector_name: "id", selector_value: "linkedin-url", error: "field" },
+  { tag: "input", selector_name: "id", selector_value: "first-name", error: "field", selected: "shortify", field: "first_name" },
+  { tag: "input", selector_name: "id", selector_value: "last-name", error: "field", selected: "shortify", field: "last_name" },
+  { tag: "input", selector_name: "id", selector_value: "company", error: "field", selected: "shortify", field: "company_name" },
+  { tag: "input", selector_name: "id", selector_value: "linkedin-profile", error: "field", selected: "shortify", field: "linkedin_url" },
 ];
-
-const width = ref(window?.innerWidth);
-const loading = ref(false);
-const email = ref();
-const showFields = ref(false);
-onMounted(() => {
-  window.addEventListener("resize", () => (width.value = window?.innerWidth));
-});
-
-function debounce(func: any, timeout = 700) {
-  let timer: any;
-  return (...args: any) => {
-    clearTimeout(timer);
-    timer = setTimeout(() => {
-      func.apply(this, args);
-    }, timeout);
-  };
-}
-
-watch(
-  email,
-  debounce(async () => {
-    loading.value = true;
-    if (email.value != "") {
-      await new Promise((res) => setTimeout(res, 1000));
-    }
-
-    if (!["", "john@example.com"].includes(email.value)) {
-      showFields.value = true;
-    } else {
-      showFields.value = false;
-    }
-    loading.value = false;
-  })
-);
 </script>
 
 <template>
@@ -48,13 +13,21 @@ watch(
       <div class="flex flex-col md:flex-row items-center justify-center md:gap-4">
         <div class="w-9/10 sm:w-4/5 md:w-1/2 mb-2 md:mb-0">
           <h3 class="font-medium sm:text-lg text-gray-800">Step 1</h3>
-          <p class="text-gray-600 text-sm">Paste the URL where the form is located</p>
+          <p class="text-gray-600">Enter page URL containing the form to shorten</p>
         </div>
 
         <div class="bg-gray-50 ring-1 ring-gray-200 rounded-md p-2 w-9/10 sm:w-4/5 md:w-1/2 mx-auto">
-          <UInput required name="domain" icon="i-heroicons-globe-alt-solid" placeholder="https://apple.com/book-demo" class="mb-2" />
+          <UInput required name="domain" placeholder="https://apple.com/book-demo" class="mb-2" :disabled="true">
+            <template #leading>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5 fill-gray-500">
+                <path
+                  d="M21.721 12.752a9.711 9.711 0 0 0-.945-5.003 12.754 12.754 0 0 1-4.339 2.708 18.991 18.991 0 0 1-.214 4.772 17.165 17.165 0 0 0 5.498-2.477ZM14.634 15.55a17.324 17.324 0 0 0 .332-4.647c-.952.227-1.945.347-2.966.347-1.021 0-2.014-.12-2.966-.347a17.515 17.515 0 0 0 .332 4.647 17.385 17.385 0 0 0 5.268 0ZM9.772 17.119a18.963 18.963 0 0 0 4.456 0A17.182 17.182 0 0 1 12 21.724a17.18 17.18 0 0 1-2.228-4.605ZM7.777 15.23a18.87 18.87 0 0 1-.214-4.774 12.753 12.753 0 0 1-4.34-2.708 9.711 9.711 0 0 0-.944 5.004 17.165 17.165 0 0 0 5.498 2.477ZM21.356 14.752a9.765 9.765 0 0 1-7.478 6.817 18.64 18.64 0 0 0 1.988-4.718 18.627 18.627 0 0 0 5.49-2.098ZM2.644 14.752c1.682.971 3.53 1.688 5.49 2.099a18.64 18.64 0 0 0 1.988 4.718 9.765 9.765 0 0 1-7.478-6.816ZM13.878 2.43a9.755 9.755 0 0 1 6.116 3.986 11.267 11.267 0 0 1-3.746 2.504 18.63 18.63 0 0 0-2.37-6.49ZM12 2.276a17.152 17.152 0 0 1 2.805 7.121c-.897.23-1.837.353-2.805.353-.968 0-1.908-.122-2.805-.353A17.151 17.151 0 0 1 12 2.276ZM10.122 2.43a18.629 18.629 0 0 0-2.37 6.49 11.266 11.266 0 0 1-3.746-2.504 9.754 9.754 0 0 1 6.116-3.985Z"
+                />
+              </svg>
+            </template>
+          </UInput>
           <div class="flex justify-end">
-            <UButton label="Search form" />
+            <UButton label="Search form" :disabled="true" />
           </div>
         </div>
       </div>
@@ -70,20 +43,22 @@ watch(
       <div class="flex flex-col md:flex-row items-center justify-center md:gap-4">
         <div class="w-9/10 sm:w-4/5 md:w-1/2 mb-2 md:mb-0">
           <h3 class="font-medium sm:text-lg text-gray-800">Step 2</h3>
-          <p class="text-gray-600 text-sm">Map which fields you want to Shorten and which you want to enrich</p>
+          <p class="text-gray-600">Map which fields you want to shorten and which you want to enrich</p>
         </div>
 
         <div class="space-y-2 bg-gray-50 ring-1 ring-gray-200 p-2 rounded-md w-9/10 sm:w-4/5 md:w-1/2 mx-auto">
           <span class="flex gap-6" v-for="(item, index) of shortifyInputs" :key="index">
-            <p class="min-w-20 sm:min-w-24 text-sm sm:text-base">{{ item.selector_value }}:</p>
-            <USelectMenu :options="['', 'shortify', 'enrich']" class="w-24">
+            <p class="min-w-28 text-sm sm:text-base">{{ item.selector_value }}:</p>
+            <USelectMenu :options="['', 'shortify', 'enrich']" class="w-24" :disabled="true" v-model="item.selected">
               <template #option="{ option }">
                 <span class="min-h-4">{{ option }}</span>
               </template>
             </USelectMenu>
             <USelectMenu
               :options="['', 'first_name', 'last_name', 'title', 'role', 'company_name', 'country', 'linkedin_url', 'x_url', 'facebook_url']"
-              class="w-32"
+              class="w-40"
+              :disabled="true"
+              v-model="item.field"
             >
               <template #option="{ option }">
                 <span class="min-h-4">{{ option }}</span>
@@ -91,7 +66,7 @@ watch(
             </USelectMenu>
           </span>
           <div class="flex justify-end">
-            <UButton label="Next" />
+            <UButton label="Next" :disabled="true" />
           </div>
         </div>
       </div>
@@ -107,7 +82,7 @@ watch(
       <div class="flex flex-col md:flex-row items-center justify-center md:gap-4">
         <div class="w-9/10 sm:w-4/5 md:w-1/2 mb-2 md:mb-0">
           <h3 class="font-medium sm:text-lg text-gray-800">Step 3</h3>
-          <p class="text-gray-600 text-sm">Install the script tag on Google Tag Mangaer</p>
+          <p class="text-gray-600">Install the script tag on Google Tag Mangaer</p>
         </div>
 
         <div class="bg-gray-50 ring-1 ring-gray-200 p-2 rounded-md w-9/10 sm:w-4/5 md:w-1/2 mx-auto">
@@ -122,7 +97,7 @@ watch(
 &lt;/script&gt;</pre
           >
           <div class="flex justify-end">
-            <UButton label="Finish" color="green" />
+            <UButton label="Finish" color="green" :disabled="true" />
           </div>
         </div>
       </div>
@@ -138,14 +113,16 @@ watch(
       <div class="flex flex-col md:flex-row items-center justify-center md:gap-4">
         <div class="w-9/10 sm:w-4/5 md:w-1/2 mb-2 md:mb-0">
           <h3 class="font-medium sm:text-lg text-gray-800">Step 4</h3>
-          <p class="text-gray-600 text-sm">
-            🎉 Your form is shorten! 🎉<br />Test it out: john@example.com will be shorten, anything else will not and the form will open up.
+          <p class="text-gray-600">
+            🎉 Your form is shorten! 🎉<br /><a href="/playground-shortify" class="text-blue-500 hover:text-blue-700 hover:underline"
+              >Click here to see it in action</a
+            >
           </p>
         </div>
 
         <div class="bg-gray-50 ring-1 ring-gray-200 p-2 rounded-md w-9/10 sm:w-4/5 md:w-1/2 mx-auto space-y-2">
           <UFormGroup label="Email" required>
-            <UInput placeholder="you@example.com" :size="width >= 640 ? 'sm' : 'xs'" v-model="email">
+            <UInput placeholder="you@example.com" size="sm" :disabled="true">
               <template #leading>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 text-gray-500">
                   <path
@@ -155,66 +132,11 @@ watch(
                   />
                 </svg>
               </template>
-
-              <template #trailing>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  :class="[loading ? '' : 'hidden', 'size-4 animate-spin']"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"
-                  />
-                </svg>
-              </template>
-            </UInput>
-          </UFormGroup>
-
-          <div :class="[showFields ? '' : 'hidden', 'flex gap-2']">
-            <UFormGroup label="First name" required class="w-1/2">
-              <UInput placeholder="John" :size="width >= 640 ? 'sm' : 'xs'" />
-            </UFormGroup>
-
-            <UFormGroup label="Last name" required class="w-1/2">
-              <UInput placeholder="Doe" :size="width >= 640 ? 'sm' : 'xs'" />
-            </UFormGroup>
-          </div>
-
-          <UFormGroup label="Company" required :class="[showFields ? '' : 'hidden']">
-            <UInput placeholder="Apple" :size="width >= 640 ? 'sm' : 'xs'"
-              ><template #leading>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 text-gray-500">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"
-                  />
-                </svg>
-              </template>
-            </UInput>
-          </UFormGroup>
-
-          <UFormGroup label="LinkedIn" required :class="[showFields ? '' : 'hidden']">
-            <UInput placeholder="https://linkedin.com/company/apple" :size="width >= 640 ? 'sm' : 'xs'">
-              <template #leading>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 sm:size-5">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"
-                  />
-                </svg>
-              </template>
             </UInput>
           </UFormGroup>
 
           <div class="flex justify-end">
-            <UButton label="Book a demo" :size="width >= 640 ? 'sm' : 'xs'" />
+            <UButton label="Book a demo" size="sm" :disabled="true" />
           </div>
         </div>
       </div>

@@ -10,7 +10,8 @@ const links = [
   //   ],
   // },
   { label: "Pricing", to: "/pricing", children: [] },
-  { label: "How it work", to: "/how-it-work", children: [] },
+  { label: "How it works", to: "/how-it-works", children: [] },
+  { label: "Playground", to: "/playground-shortify", children: [] },
 ];
 
 const route = useRoute();
