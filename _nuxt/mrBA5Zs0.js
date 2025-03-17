@@ -1,1 +1,0 @@
-import{_ as o}from"./DlAUqK2U.js";import{c as s,g as t,i as r}from"./Df5XLOyH.js";const a={},c={class:"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24"};function n(p,e){return r(),s("div",c,e[0]||(e[0]=[t("p",null,"help",-1)]))}const x=o(a,[["render",n]]);export{x as default};
