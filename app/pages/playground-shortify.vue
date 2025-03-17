@@ -157,7 +157,13 @@ const reset = () => {
           :search-input="false"
           :items="['Engineering', 'Marketing', 'HR', 'Sales', 'IT', 'Finance', 'Customer Success']"
           class="w-full"
-        />
+        >
+          <template #trailing>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 text-gray-500">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+            </svg>
+          </template>
+        </USelectMenu>
       </UFormField>
 
       <UFormField label="Company" required :class="[!showFields.includes('company_name') ? '' : 'hidden', 'motion-opacity-in-0 -motion-translate-y-in-25']">
