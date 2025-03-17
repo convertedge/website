@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import type { button } from "#build/ui";
 import AppFields from "@/components/usecases/AppFields.vue";
 
 const props = defineProps({

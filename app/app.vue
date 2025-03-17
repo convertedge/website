@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { data } = await useAsyncData("index", () => queryContent("/").findOne());
+const { data } = await useAsyncData("index", () => queryCollection("index").first());
 
 useHead({
   meta: [
