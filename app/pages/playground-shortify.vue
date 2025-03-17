@@ -54,6 +54,10 @@ watch(
       localState.last_name = "doe";
       localState.company_name = "apple";
     } else {
+      localState.first_name = "";
+      localState.last_name = "";
+      localState.company_name = "";
+      localState.linkedin_url = "";
       showFields.value = "";
     }
     loading.value = false;
