@@ -17,7 +17,7 @@ const shortifyInputs = [
         </div>
 
         <div class="bg-gray-50 ring-1 ring-gray-200 rounded-md p-2 w-9/10 sm:w-4/5 md:w-1/2 mx-auto">
-          <UInput required name="domain" placeholder="https://apple.com/book-demo" class="mb-2" :disabled="true">
+          <UInput required name="domain" placeholder="https://apple.com/book-demo" class="mb-2 w-full" :disabled="true">
             <template #leading>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5 fill-gray-500">
                 <path
@@ -49,21 +49,13 @@ const shortifyInputs = [
         <div class="space-y-2 bg-gray-50 ring-1 ring-gray-200 p-2 rounded-md w-9/10 sm:w-4/5 md:w-1/2 mx-auto">
           <span class="flex gap-6" v-for="(item, index) of shortifyInputs" :key="index">
             <p class="min-w-28 text-sm sm:text-base">{{ item.selector_value }}:</p>
-            <USelectMenu :options="['', 'shortify', 'enrich']" class="w-24" :disabled="true" v-model="item.selected">
-              <template #option="{ option }">
-                <span class="min-h-4">{{ option }}</span>
-              </template>
-            </USelectMenu>
+            <USelectMenu :options="['', 'shortify', 'enrich']" class="w-24" :disabled="true" v-model="item.selected" />
             <USelectMenu
               :options="['', 'first_name', 'last_name', 'title', 'role', 'company_name', 'country', 'linkedin_url', 'x_url', 'facebook_url']"
               class="w-40"
               :disabled="true"
               v-model="item.field"
-            >
-              <template #option="{ option }">
-                <span class="min-h-4">{{ option }}</span>
-              </template>
-            </USelectMenu>
+            />
           </span>
           <div class="flex justify-end">
             <UButton label="Next" :disabled="true" />
@@ -97,7 +89,7 @@ const shortifyInputs = [
 &lt;/script&gt;</pre
           >
           <div class="flex justify-end">
-            <UButton label="Finish" color="green" :disabled="true" />
+            <UButton label="Finish" color="success" :disabled="true" />
           </div>
         </div>
       </div>
@@ -121,8 +113,8 @@ const shortifyInputs = [
         </div>
 
         <div class="bg-gray-50 ring-1 ring-gray-200 p-2 rounded-md w-9/10 sm:w-4/5 md:w-1/2 mx-auto space-y-2">
-          <UFormGroup label="Email" required>
-            <UInput placeholder="you@example.com" size="sm" :disabled="true">
+          <UFormField label="Email" required>
+            <UInput placeholder="you@example.com" size="sm" :disabled="true" class="w-full">
               <template #leading>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 text-gray-500">
                   <path
@@ -133,7 +125,7 @@ const shortifyInputs = [
                 </svg>
               </template>
             </UInput>
-          </UFormGroup>
+          </UFormField>
 
           <div class="flex justify-end">
             <UButton label="Book a demo" size="sm" :disabled="true" />

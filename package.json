@@ -12,18 +12,20 @@
     "typecheck": "nuxt typecheck"
   },
   "dependencies": {
-    "@nuxt/content": "^2.13.4",
-    "@nuxt/fonts": "^0.10.0",
-    "@nuxt/image": "^1.8.1",
-    "@nuxt/ui": "^2.19.2",
+    "@nuxt/content": "^3.3.0",
+    "@nuxt/fonts": "^0.11.0",
+    "@nuxt/image": "^1.9.0",
+    "@nuxt/ui": "^3.0.0",
     "@nuxtjs/seo": "^2.0.2",
+    "@unhead/vue": "^2.0.0-rc.1",
     "@unovis/ts": "^1.5.0",
     "@unovis/vue": "^1.5.0",
-    "nuxt": "^3.13.2",
-    "posthog-js": "^1.194.3"
+    "nuxt": "^3.16.0",
+    "nuxt-og-image": "^5.0.3",
+    "posthog-js": "^1.194.3",
+    "unstorage": "^1.15.0"
   },
   "devDependencies": {
-    "@nuxthq/studio": "^2.1.1",
     "@zadigetvoltaire/nuxt-gtm": "^0.0.13",
     "commitizen": "^4.3.1",
     "eslint": "^9.13.0",

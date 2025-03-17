@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { button } from "#build/ui";
 import AppFields from "@/components/usecases/AppFields.vue";
 
 const props = defineProps({
@@ -24,18 +25,13 @@ onMounted(() => {
         v-if="width >= 425"
         :items="data.items"
         :orientation="width >= 1024 ? `horizontal` : `vertical`"
+        color="neutral"
         :ui="{
-          wrapper: `${width >= 1024 ? 'relative space-y-0' : 'bg-gray-50 rounded-lg h-full flex lg:items-center gap-0 space-y-0'}`,
-          list: {
-            background: 'bg-gray-50',
-            rounded: `${width >= 1024 ? 'rounded-none  rounded-t-lg' : 'rounded-none rounded-l-lg h-full'}`,
-            width: `${width >= 1024 ? 'w-full' : 'w-48'}`,
-            marker: { background: 'bg-gray-900' },
-            tab: { active: 'text-gray-50', padding: 'px-0.5 md:px-2', size: `${width >= 640 ? 'text-sm' : 'text-xs'}` },
-          },
+          root: `${width >= 1024 ? 'flex items-center gap-0 bg-gray-50 rounded-lg' : 'flex items-start gap-0 bg-gray-50 rounded-lg'}`,
+          list: 'relative flex p-1 group bg-gray-50',
         }"
       >
-        <template #item="{ item }">
+        <template #content="{ item }">
           <div v-if="item.label == 'Contact us'" :class="[`${width >= 1024 ? 'rounded-b-lg' : 'rounded-r-lg'}`, 'md:w-[30rem] lg:w-[56rem] bg-gray-50']">
             <AppFields
               :fields="['email', 'message']"
@@ -79,7 +75,7 @@ onMounted(() => {
           </div>
         </template>
 
-        <template #icon="{ item, selected }">
+        <template #leading="{ item, selected }">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -158,15 +154,7 @@ onMounted(() => {
         </template>
       </UTabs>
       <div v-else class="bg-gray-50 min-w-full rounded-md">
-        <USelectMenu
-          v-model="selectedTab"
-          :options="data.items"
-          class="w-full"
-          :ui="{
-            rounded: 'rounded-none',
-            color: { white: { outline: 'bg-gray-50 ring-0 shadow-none rounded-none' } },
-          }"
-        >
+        <USelectMenu v-model="selectedTab" :items="data.items" :search-input="false" class="w-full">
           <template #leading>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -245,7 +233,7 @@ onMounted(() => {
             </svg>
           </template>
 
-          <template #option="{ option }">
+          <template #item="{ item }">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -253,7 +241,7 @@ onMounted(() => {
               stroke-width="1.5"
               stroke="currentColor"
               class="size-5"
-              v-if="option.icon == 'chat-bubble-left-right'"
+              v-if="item.icon == 'chat-bubble-left-right'"
             >
               <path
                 stroke-linecap="round"
@@ -268,7 +256,7 @@ onMounted(() => {
               stroke-width="1.5"
               stroke="currentColor"
               class="size-5"
-              v-if="option.icon == 'newspaper'"
+              v-if="item.icon == 'newspaper'"
             >
               <path
                 stroke-linecap="round"
@@ -283,7 +271,7 @@ onMounted(() => {
               stroke-width="1.5"
               stroke="currentColor"
               class="size-5"
-              v-if="option.icon == 'bookmark'"
+              v-if="item.icon == 'bookmark'"
             >
               <path
                 stroke-linecap="round"
@@ -298,7 +286,7 @@ onMounted(() => {
               stroke-width="1.5"
               stroke="currentColor"
               class="size-5"
-              v-if="option.icon == 'identification'"
+              v-if="item.icon == 'identification'"
             >
               <path
                 stroke-linecap="round"
@@ -313,7 +301,7 @@ onMounted(() => {
               stroke-width="1.5"
               stroke="currentColor"
               class="size-5"
-              v-if="option.icon == 'calendar-days'"
+              v-if="item.icon == 'calendar-days'"
             >
               <path
                 stroke-linecap="round"
@@ -321,10 +309,10 @@ onMounted(() => {
                 d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
               />
             </svg>
-            <span>{{ option.label }}</span>
+            <span>{{ item.label }}</span>
           </template>
         </USelectMenu>
-        <hr class="mb-4" />
+        <hr class="mb-4 text-gray-200" />
         <div v-if="selectedTab.label == 'Contact us'" :class="[`${width >= 1024 ? 'rounded-b-lg' : 'rounded-r-lg'}`, 'md:w-[30rem] lg:w-[56rem]']">
           <AppFields
             :fields="['email', 'message']"

@@ -33,5 +33,4 @@ cta:
   subtitle: Start using Shortify today!
   link:
     label: Get started
-    color: black
     to: https://app.convertedge.co/auth/register

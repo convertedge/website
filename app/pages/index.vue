@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { data } = await useAsyncData("index", () => queryContent("/").findOne());
+const { data } = await useAsyncData("index", () => queryCollection("index").first());
 </script>
 
 <template>
@@ -37,7 +37,7 @@ const { data } = await useAsyncData("index", () => queryContent("/").findOne());
         {{ data.cta.title }}<br class="hidden sm:block" /><span class="ml-1 sm:ml-0">{{ data.cta.subtitle }}</span>
       </h2>
       <div class="mt-6">
-        <UButton :label="data.cta.link.label" :color="data.cta.link.color" :to="data.cta.link.to" />
+        <UButton :label="data.cta.link.label" :to="data.cta.link.to" />
       </div>
     </div>
   </div>
@@ -50,7 +50,7 @@ const { data } = await useAsyncData("index", () => queryContent("/").findOne());
 <style scoped>
 .landing-grid {
   background-size: 100px 100px;
-  background-image: linear-gradient(to right, rgb(var(--color-gray-200)) 1px, transparent 1px),
-    linear-gradient(to bottom, rgb(var(--color-gray-200)) 1px, transparent 1px);
+  background-image: linear-gradient(to right, oklch(0.928 0.006 264.531) 1px, transparent 1px),
+    linear-gradient(to bottom, oklch(0.928 0.006 264.531) 1px, transparent 1px);
 }
 </style>

@@ -41,7 +41,7 @@ const resetNav = () => {
         </a>
       </div>
       <div class="flex lg:hidden">
-        <UButton icon="i-heroicons-bars-3" size="sm" color="gray" square variant="ghost" @click="mobile = !mobile" />
+        <UButton icon="i-heroicons-bars-3" size="sm" color="neutral" square variant="ghost" @click="mobile = !mobile" />
       </div>
       <div class="hidden lg:flex lg:gap-x-10 gap-4 py-2 px-4">
         <span v-for="(link, index) of links">
@@ -77,8 +77,8 @@ const resetNav = () => {
         </span>
       </div>
       <div class="hidden lg:flex flex-1 justify-end gap-2">
-        <UButton label="Sign in" color="gray" to="https://app.convertedge.co/auth/login" />
-        <UButton label="Sign up" icon="i-heroicons-arrow-right-20-solid" trailing color="black" to="https://app.convertedge.co/auth/register" />
+        <UButton label="Sign in" color="neutral" variant="outline" to="https://app.convertedge.co/auth/login" />
+        <UButton label="Sign up" icon="i-heroicons-arrow-right-20-solid" trailing color="neutral" to="https://app.convertedge.co/auth/register" />
       </div>
     </nav>
   </header>
@@ -87,7 +87,7 @@ const resetNav = () => {
   <div :class="[mobile ? 'lg:hidden' : 'hidden']">
     <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto px-6 py-4 sm:max-w-60 bg-gray-50">
       <div class="flex items-center justify-end">
-        <UButton icon="i-heroicons-x-mark" size="sm" color="gray" square variant="ghost" @click="mobile = !mobile" />
+        <UButton icon="i-heroicons-x-mark" size="sm" color="neutral" square variant="ghost" @click="mobile = !mobile" />
       </div>
       <div>
         <div class="divide-y divide-gray-300">
@@ -106,8 +106,8 @@ const resetNav = () => {
             </ULink>
           </div>
           <div class="py-6 flex justify-around">
-            <UButton label="Sign in" color="gray" to="https://app.convertedge.co/login" />
-            <UButton label="Sign up" icon="i-heroicons-arrow-right-20-solid" trailing color="black" to="https://app.convertedge.co/register" />
+            <UButton label="Sign in" color="neutral" variant="outline" to="https://app.convertedge.co/login" />
+            <UButton label="Sign up" icon="i-heroicons-arrow-right-20-solid" trailing color="neutral" to="https://app.convertedge.co/register" />
           </div>
         </div>
       </div>

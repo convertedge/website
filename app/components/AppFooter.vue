@@ -65,15 +65,7 @@ function onSubmit() {
 
       <form @submit.prevent="onSubmit" class="mt-4 col-span-2 lg:mt-0 sm:col-span-1">
         <p class="mb-1 font-medium text-sm text-gray-700">Subscribe to our changelog</p>
-        <UInput
-          v-model="email"
-          type="email"
-          placeholder="Enter your email"
-          :ui="{ icon: { trailing: { pointer: '' } } }"
-          required
-          size="xl"
-          autocomplete="email"
-        >
+        <UInput v-model="email" type="email" placeholder="Enter your email" required size="xl" autocomplete="email" class="w-full">
           <template #trailing>
             <UButton type="submit" size="xs" color="primary" :label="loading ? 'Subscribing' : 'Subscribe'" :loading="loading" />
           </template>
@@ -85,17 +77,17 @@ function onSubmit() {
       <p class="text-gray-500 text-sm">Copyright © {{ new Date().getFullYear() }}. All rights reserved.</p>
 
       <div class="flex gap-2 items-center">
-        <!-- <UButton to="https://github.com/nuxt-ui-pro/saas" target="_blank" icon="i-simple-icons-x" aria-label="X" color="gray" variant="ghost" /> -->
+        <!-- <UButton to="https://github.com/nuxt-ui-pro/saas" target="_blank" icon="i-simple-icons-x" aria-label="X" color="neutral" variant="ghost" /> -->
         <UButton
           to="https://www.linkedin.com/company/convertedge-co"
           target="_blank"
           icon="i-simple-icons-linkedin"
           aria-label="LinkedIn"
-          color="gray"
+          color="neutral"
           variant="ghost"
         />
-        <!-- <UButton to="https://github.com/nuxt-ui-pro/saas" target="_blank" icon="i-simple-icons-youtube" aria-label="YouTube" color="gray" variant="ghost" /> -->
-        <UButton to="https://github.com/convertedge" target="_blank" icon="i-simple-icons-github" aria-label="GitHub" color="gray" variant="ghost" />
+        <!-- <UButton to="https://github.com/nuxt-ui-pro/saas" target="_blank" icon="i-simple-icons-youtube" aria-label="YouTube" color="neutral" variant="ghost" /> -->
+        <UButton to="https://github.com/convertedge" target="_blank" icon="i-simple-icons-github" aria-label="GitHub" color="neutral" variant="ghost" />
       </div>
     </div>
   </footer>

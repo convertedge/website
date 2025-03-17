@@ -20,8 +20,8 @@ defineProps({
     <div class="w-full">
       <p class="text-center font-medium mb-1 text-sm sm:text-base">Your form</p>
       <div class="space-y-2 bg-white ring-1 ring-gray-200 p-2 rounded-xl">
-        <UFormGroup label="Email" required v-if="fields.includes('email')">
-          <UInput placeholder="you@example.com" :size="width >= 640 ? 'sm' : 'xs'">
+        <UFormField label="Email" required v-if="fields.includes('email')">
+          <UInput placeholder="you@example.com" :size="width >= 640 ? 'sm' : 'xs'" class="w-full">
             <template #leading>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 text-gray-500">
                 <path
@@ -32,9 +32,9 @@ defineProps({
               </svg>
             </template>
           </UInput>
-        </UFormGroup>
-        <UFormGroup label="Password" required v-if="fields.includes('password')">
-          <UInput placeholder="********" :size="width >= 640 ? 'sm' : 'xs'">
+        </UFormField>
+        <UFormField label="Password" required v-if="fields.includes('password')">
+          <UInput placeholder="********" :size="width >= 640 ? 'sm' : 'xs'" class="w-full">
             <template #leading>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 text-gray-500">
                 <path
@@ -45,9 +45,9 @@ defineProps({
               </svg>
             </template>
           </UInput>
-        </UFormGroup>
-        <UFormGroup label="Company name" required v-if="fields.includes('company')">
-          <UInput placeholder="Apple" :size="width >= 640 ? 'sm' : 'xs'">
+        </UFormField>
+        <UFormField label="Company name" required v-if="fields.includes('company')">
+          <UInput placeholder="Apple" :size="width >= 640 ? 'sm' : 'xs'" class="w-full">
             <template #leading>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 text-gray-500">
                 <path
@@ -58,23 +58,24 @@ defineProps({
               </svg>
             </template>
           </UInput>
-        </UFormGroup>
-        <UFormGroup label="How can we help?" required v-if="fields.includes('message')">
+        </UFormField>
+        <UFormField label="How can we help?" required v-if="fields.includes('message')">
           <UTextarea
-            color="white"
+            color="neutral"
             variant="outline"
             :size="width >= 640 ? 'sm' : 'xs'"
             placeholder="I’m interested in Convertedge for my team. I’d like to learn more about..."
+            class="w-full"
           />
-        </UFormGroup>
-        <div class="flex justify-end"><UButton :label="text" :size="width >= 640 ? 'sm' : 'xs'" /></div>
+        </UFormField>
+        <div class="flex justify-end"><UButton :label="text" :size="width >= 640 ? 'md' : 'sm'" /></div>
       </div>
     </div>
 
     <div class="w-full">
       <p class="text-center font-medium mb-1 text-sm sm:text-base">The data you get</p>
       <div class="bg-white ring-1 ring-gray-200 rounded-xl">
-        <div class="xs:grid grid-cols-2 w-[98%] h-fit space-y-2 p-2 text-xs sm:text-sm overflow-x-scroll">
+        <div class="sm:grid grid-cols-2 w-[98%] h-fit space-y-2 p-2 text-xs sm:text-sm overflow-x-scroll">
           <p class="col-span-2 text-gray-500">{</p>
           <span class="text-gray-500 flex items-center gap-2 pl-2" v-if="hidden.includes('first name')">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 sm:size-5">

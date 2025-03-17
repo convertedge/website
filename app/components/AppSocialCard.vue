@@ -11,20 +11,20 @@
       <rect width="100%" height="100%" stroke-width="0" fill="url(#0787a7c5-978c-4f66-83c7-11c213f99cb7)" />
     </svg>
 
-    <div class="h-full flex gap-8 items-center">
-      <div class="w-1/2">
+    <div class="h-full flex gap-14 items-center">
+      <div class="w-1/2 h-full py-24">
         <span class="flex gap-2 items-center">
-          <UIcon name="i-heroicons-cube-transparent" class="w-10 h-10" />
-          <h1 class="text-pretty text-5xl">Convertedge</h1>
+          <UIcon name="i-heroicons-cube-transparent" class="w-12 h-12" />
+          <h1 class="text-pretty text-6xl">Convertedge</h1>
         </span>
-        <h2 class="text-pretty text-3xl text-gray-700 mt-2">Boost conversion of any page!</h2>
-        <p class="mt-6 text-pretty text-gray-500 sm:text-xl">
+        <h2 class="text-pretty text-4xl text-gray-700 mt-2">Boost conversion of any page!</h2>
+        <p class="mt-14 text-pretty text-gray-500 sm:text-2xl">
           Simple, no-code installation to automatically shorten and enrich any form. Increase your conversion rates by 42% in 5 minutes.
         </p>
       </div>
 
       <div class="w-1/2">
-        <div class="bg-gray-100 ring-1 ring-inset ring-gray-900/10 rounded-2xl p-4 w-[40rem] -translate-x-1">
+        <div class="bg-gray-100 ring-1 ring-inset ring-gray-900/10 rounded-2xl p-4 w-[44rem] -translate-x-16">
           <div class="h-[30rem] max-w-screen-xl ring-1 ring-gray-900/10 grid grid-cols-12 grid-rows-12 gap-2 p-2 rounded-lg bg-gray-50">
             <div class="col-span-4 row-span-3 p-2 bg-gray-950 rounded-md">
               <p class="text-gray-50 flex gap-2 items-center text-lg">ROI <UIcon name="i-heroicons-arrow-trending-up  h-6 w-6" /></p>

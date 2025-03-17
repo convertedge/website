@@ -102,8 +102,8 @@ const reset = () => {
     </div>
 
     <form class="bg-gray-50 ring-1 ring-gray-200 p-2 rounded-md w-9/10 sm:w-4/5 md:w-1/2 mx-auto space-y-2" @submit.prevent="submit" v-if="!showSuccess">
-      <UFormGroup label="Email" required>
-        <UInput placeholder="you@example.com" :size="width >= 640 ? 'sm' : 'xs'" v-model="localState.email">
+      <UFormField label="Email" required>
+        <UInput placeholder="you@example.com" :size="width >= 640 ? 'md' : 'sm'" v-model="localState.email" class="w-full">
           <template #leading>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 text-gray-500">
               <path
@@ -131,32 +131,37 @@ const reset = () => {
             </svg>
           </template>
         </UInput>
-      </UFormGroup>
+      </UFormField>
 
       <div class="flex gap-2">
-        <UFormGroup
+        <UFormField
           label="First name"
           required
           :class="[!showFields.includes('first_name') ? '' : 'hidden', 'w-1/2 motion-opacity-in-0 -motion-translate-y-in-25']"
         >
-          <UInput placeholder="John" :size="width >= 640 ? 'sm' : 'xs'" v-model="localState.first_name" />
-        </UFormGroup>
+          <UInput placeholder="John" :size="width >= 640 ? 'md' : 'sm'" v-model="localState.first_name" class="w-full" />
+        </UFormField>
 
-        <UFormGroup
+        <UFormField
           label="Last name"
           required
           :class="[!showFields.includes('last_name') ? '' : 'hidden', 'w-1/2 motion-opacity-in-0 -motion-translate-y-in-25']"
         >
-          <UInput placeholder="Doe" :size="width >= 640 ? 'sm' : 'xs'" v-model="localState.last_name" />
-        </UFormGroup>
+          <UInput placeholder="Doe" :size="width >= 640 ? 'md' : 'sm'" v-model="localState.last_name" class="w-full" />
+        </UFormField>
       </div>
 
-      <UFormGroup label="Department" required>
-        <USelectMenu v-model="localState.department" :options="['Engineering', 'Marketing', 'HR', 'Sales', 'IT', 'Finance', 'Customer Success']" />
-      </UFormGroup>
+      <UFormField label="Department" required>
+        <USelectMenu
+          v-model="localState.department"
+          :search-input="false"
+          :items="['Engineering', 'Marketing', 'HR', 'Sales', 'IT', 'Finance', 'Customer Success']"
+          class="w-full"
+        />
+      </UFormField>
 
-      <UFormGroup label="Company" required :class="[!showFields.includes('company_name') ? '' : 'hidden', 'motion-opacity-in-0 -motion-translate-y-in-25']">
-        <UInput placeholder="Apple" :size="width >= 640 ? 'sm' : 'xs'" v-model="localState.company_name"
+      <UFormField label="Company" required :class="[!showFields.includes('company_name') ? '' : 'hidden', 'motion-opacity-in-0 -motion-translate-y-in-25']">
+        <UInput placeholder="Apple" :size="width >= 640 ? 'md' : 'sm'" v-model="localState.company_name" class="w-full"
           ><template #leading>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 text-gray-500">
               <path
@@ -167,10 +172,10 @@ const reset = () => {
             </svg>
           </template>
         </UInput>
-      </UFormGroup>
+      </UFormField>
 
-      <UFormGroup label="LinkedIn" required :class="[!showFields.includes('linkedin_url') ? '' : 'hidden', 'motion-opacity-in-0 -motion-translate-y-in-25']">
-        <UInput placeholder="https://linkedin.com/company/apple" :size="width >= 640 ? 'sm' : 'xs'" v-model="localState.linkedin_url">
+      <UFormField label="LinkedIn" required :class="[!showFields.includes('linkedin_url') ? '' : 'hidden', 'motion-opacity-in-0 -motion-translate-y-in-25']">
+        <UInput placeholder="https://linkedin.com/company/apple" :size="width >= 640 ? 'md' : 'sm'" v-model="localState.linkedin_url" class="w-full">
           <template #leading>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -188,9 +193,9 @@ const reset = () => {
             </svg>
           </template>
         </UInput>
-      </UFormGroup>
+      </UFormField>
 
-      <UAlert title="You missing some fields" color="red" variant="solid" v-if="showError"
+      <UAlert title="You missing some fields" color="error" variant="solid" v-if="showError"
         ><template #icon>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
             <path
@@ -203,13 +208,13 @@ const reset = () => {
       </UAlert>
 
       <div class="flex justify-end">
-        <UButton label="Book a demo" :size="width >= 640 ? 'sm' : 'xs'" type="submit" />
+        <UButton label="Book a demo" :size="width >= 640 ? 'md' : 'sm'" type="submit" />
       </div>
     </form>
 
     <div v-else class="bg-gray-50 ring-1 ring-gray-200 p-2 rounded-md w-9/10 sm:w-4/5 md:w-1/2 mx-auto space-y-2 overflow-x-scroll">
       <div class="flex justify-between items-center gap-4">
-        <p>form sbmitted</p>
+        <p class="text-lg font-semibold">Data submitted:</p>
 
         <UButton label="reset" @click="reset" />
       </div>

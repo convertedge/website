@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { data } = await useAsyncData("pricing", () => queryContent("/pricing").findOne());
+const { data } = await useAsyncData("pricing", () => queryCollection("pricing").first());
 
 const submissions = ref(100);
 const formatter = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", minimumFractionDigits: 0, maximumFractionDigits: 0 });
@@ -23,7 +23,7 @@ const total = computed(() => {
           <div class="sm:flex items-center gap-4">
             <p class="text-gray-500">Submissions</p>
             <span class="flex items-center gap-4 w-full">
-              <URange size="sm" :min="0" :step="1" :max="1000" v-model="submissions" />
+              <USlider size="sm" :min="0" :step="1" :max="1000" v-model="submissions" />
               <UInput v-model="submissions" placeholder="Number of monthly req" type="number"> </UInput>
             </span>
           </div>
