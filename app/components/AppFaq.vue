@@ -11,7 +11,7 @@ defineProps({
 
 const openedFaq = ref(null);
 
-const open = (index: string) => {
+const open = (index: number) => {
   if (openedFaq.value == index) {
     openedFaq.value = null;
   } else {
@@ -21,10 +21,9 @@ const open = (index: string) => {
 </script>
 
 <template>
-  <div :class="[type == 'open' ? 'lg:grid lg:grid-cols-12 lg:gap-8' : '', 'mt-32']">
+  <div :class="[type == 'open' ? 'lg:grid lg:grid-cols-12 lg:gap-8' : '']">
     <div :class="[type == 'open' ? '' : 'text-center', 'lg:col-span-5']">
       <h2 class="text-pretty text-3xl font-semibold tracking-tight sm:text-4xl">{{ data.title }}</h2>
-      <p class="mt-4 text-gray-600" v-html="data.description"></p>
     </div>
 
     <div class="mt-8 lg:col-span-7 lg:mt-0">
@@ -63,7 +62,14 @@ const open = (index: string) => {
             </svg>
           </div>
 
-          <dd :class="[openedFaq == index ? '' : 'hidden', 'mt-2 text-gray-600']">
+          <dd
+            :class="[
+              openedFaq == index ? '' : 'hidden',
+              type == 'closed' ? '-mt-2' : 'mt-2',
+              type == 'closed' && openedFaq == index ? 'pb-4' : '',
+              'text-gray-600',
+            ]"
+          >
             {{ item.content }}
           </dd>
         </div>

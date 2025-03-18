@@ -7,7 +7,7 @@ const fields = [
   "Location: Los Altos, CA, US",
   "Company: Apple",
 ];
-const place = [6, 25, 13, 2, 12, 4];
+const place = [12, 33, 20, 4, 34, 10];
 
 const props = defineProps({
   element: {
@@ -38,7 +38,7 @@ const listen = () => {
   <div class="h-full py-2 bg-gray-50 overflow-hidden flex flex-col justify-between">
     <div v-for="index of 6" :key="index" class="flex items-center">
       <span v-for="number of place[index - 1]" :key="number" class="text-gray-200">•</span>
-      <UBadge :label="fields[index - 1]" :class="[showAnimation ? 'animate-pulse' : '', 'whitespace-nowrap']" :size="width >= 425 ? 'sm' : 'xs'" />
+      <UBadge :label="fields[index - 1]" :class="[showAnimation ? 'animate-pulse' : '', 'whitespace-nowrap']" :size="width >= 425 ? 'md' : 'sm'" />
       <span v-for="number of 100" :key="number" class="text-gray-200">•</span>
     </div>
   </div>

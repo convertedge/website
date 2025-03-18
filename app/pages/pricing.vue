@@ -58,6 +58,8 @@ const total = computed(() => {
       </div>
     </div>
 
-    <AppFaq />
+    <div class="mt-32">
+      <AppFaq />
+    </div>
   </div>
 </template>

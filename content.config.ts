@@ -20,16 +20,12 @@ export default defineContentConfig({
         }),
         features: z.object({
           title: z.string().nonempty(),
-          items: z.array(
-            z.object({
-              title: z.string().nonempty(),
-              description: z.string().nonempty(),
-            })
-          ),
+          description: z.string().nonempty(),
+          items: z.array(z.string().nonempty()),
         }),
         cta: z.object({
           title: z.string().nonempty(),
-          subtitle: z.string().nonempty(),
+          items: z.array(z.string().nonempty()),
           link: z.object({
             label: z.string().nonempty(),
             to: z.string().nonempty(),
@@ -42,7 +38,6 @@ export default defineContentConfig({
       type: "data",
       schema: z.object({
         title: z.string().nonempty(),
-        description: z.string().nonempty(),
         items: z.array(
           z.object({
             label: z.string().nonempty(),

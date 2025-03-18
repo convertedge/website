@@ -8,8 +8,23 @@ const shortifyInputs = [
 </script>
 
 <template>
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-20">
-    <div class="flex flex-col space-y-5">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-20">
+    <div class="text-gray-900 space-y-8">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl sm:tracking-tight text-center">
+        Simple, no-code solution to automatically shorten and enrich any form fields
+      </h2>
+
+      <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 text-sm xl:text-base">
+        <li class="px-4 py-2 ring-1 ring-gray-300 rounded-full w-fit mx-auto">No revops required</li>
+        <li class="px-4 py-2 ring-1 ring-gray-300 rounded-full w-fit mx-auto">Boosts LP conversions</li>
+        <li class="px-4 py-2 ring-1 ring-gray-300 rounded-full w-fit mx-auto">No tech integrations</li>
+        <li class="px-4 py-2 ring-1 ring-gray-300 rounded-full w-fit mx-auto">Fully flexible 5 mins installation</li>
+      </ul>
+    </div>
+
+    <div class="flex flex-col space-y-5 max-w-5xl mx-auto pb-20 pt-32">
+      <h3 class="text-xl md:text-2xl">Shorten your form in 3 easy steps:</h3>
+
       <div class="flex flex-col md:flex-row items-center justify-center md:gap-4">
         <div class="w-9/10 sm:w-4/5 md:w-1/2 mb-2 md:mb-0">
           <h3 class="font-medium sm:text-lg text-gray-800">Step 1</h3>

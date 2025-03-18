@@ -1,5 +1,4 @@
 title: Frequently asked questions
-description: Can’t find the answer you’re looking for? Reach out to our <a href="mailto:convertedge.co@gmail.com" class="font-semibold text-sky-600 hover:text-sky-500">customer support</a> team.
 items:
   - label: Does Convertege work with any form type?
     content: Generally yes. We work with the main marketing automations and CRM forms - like Hubspot, Marketo, Pardot, Eloqua, and with the main CMS forms like Wordpress, Webflow, Wix etc. It may not work well with other form shortening services like Typeform. Not sure it works? You can test it very simply or ask us.
@@ -10,7 +9,7 @@ items:
   - label: What happens if you can’t enrich a lead’s data?
     content: In case we didn’t find enrichment data that is based on a the email submitted by the user, your original form will appear for the user, and they’ll just need to fill it in as they normally should have done.
   - label: How does pricing work?
-    content: Pricing is based on usage. We charge one credit if we manage to enrich a lead. In case weren't able to enrich it, then you won't be charged for this form submission, and the original form fields will be exposed to the user to fill in (as originally created by you). You can also set a cap on how much total you’re willing to invest in form shortening per month. Meaning it will stop shortening and enriching a lead when you reach the cap, and your original form will be displayed, until the next billing cycle begins.
+    content: Pricing is based on usage. You start with a small package of 50 enrichment credits per month which is at $40 per month. Billing continues on a monthly cycle based, unused credits from the previous month are transferred as well to the next billing cycle, and you’ll be charged again based on the plan you’ve selected.
   - label: Can I stop at any time?
     content: Yes. You can stop at any time at the pay as you go and monthly plans.
   - label: How long does it really take to install, it’s not 5 minutes right?

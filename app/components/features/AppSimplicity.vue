@@ -21,7 +21,7 @@ const listen = () => {
 </script>
 
 <template>
-  <div class="h-full bg-gray-50 overflow-hidden flex flex-col justify-between">
+  <div class="h-full bg-gray-50 overflow-hidden flex flex-col justify-between relative">
     <div class="relative grid grid-cols-12 grid-rows-12 h-full w-full">
       <div class="border-b border-r border-gray-200"></div>
       <div class="border-b border-gray-200 col-span-11"></div>
@@ -40,17 +40,12 @@ const listen = () => {
       <div class="border-t border-r border-gray-200"></div>
       <div class="border-t border-gray-200 col-span-11"></div>
 
-      <span class="cross rotate-45 h-8 w-8 text-2xl font-extralight absolute top-[4.75%] left-[7.5%] lg:left-[6%] text-gray-300"></span>
-      <span class="cross rotate-45 h-8 w-8 text-2xl font-extralight absolute bottom-[2%] left-[7.5%] lg:left-[6%] text-gray-300"></span>
+      <span class="cross rotate-45 h-8 w-8 text-2xl font-extralight absolute top-[4.75%] left-[7%] text-gray-300"></span>
+      <span class="cross rotate-45 h-8 w-8 text-2xl font-extralight absolute bottom-[2%] left-[7%] text-gray-300"></span>
     </div>
 
     <div class="h-full w-full absolute">
-      <svg
-        viewBox="0 0 256 256"
-        version="1.1"
-        xmlns="http://www.w3.org/2000/svg"
-        class="size-12 absolute left-[70%] sm:left-[38%] md:left-[34%] lg:left-[66%] xl:left-[62%] bottom-[45%] sm:bottom-[40%] lg:bottom-[48%]"
-      >
+      <svg viewBox="0 0 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" class="size-12 absolute left-[55%] bottom-[20%]">
         <g>
           <polygon fill="#8AB4F8" points="150.261818 245.516364 105.825455 202.185455 201.258182 104.730909 247.265455 149.821818"></polygon>
           <path
@@ -64,7 +59,7 @@ const listen = () => {
           <circle fill="#246FDB" cx="127.265455" cy="224.730909" r="31.2727273"></circle>
         </g>
       </svg>
-      <div class="absolute arrow left-[28%] sm:left-[20%] lg:left-[34%] bottom-[45%] sm:bottom-[40%] lg:bottom-[48%]">
+      <div class="absolute arrow left-[35%] bottom-[20%]">
         <div class="curve border-2 border-gray-300 h-48 w-32"></div>
         <div
           class="point absolute before:top-[-1.7rem] before:left-[5.65rem] before:h-6 before:absolute before:border before:border-gray-300 after:top-[-2.45rem] after:left-[5.65rem] after:h-6 after:absolute after:border after:border-gray-300"

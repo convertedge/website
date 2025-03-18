@@ -20,40 +20,42 @@ onMounted(() => {
 </script>
 
 <template>
-  <h3 class="mb-4 sm:mb-6 lg:mb-8 text-pretty font-semibold text-gray-950 text-3xl md:text-4xl lg:text-5xl text-center">
-    {{ data.title }}
+  <h3 class="px-14 mb-2 lg:mb-4 text-2xl sm:text-4xl md:text-5xl lg:text-6xl sm:tracking-tight text-center text-gray-900">
+    <span class="font-bold text-primary-500">Shorten & enrich</span> any form! <span class="font-bold text-primary-500">Boost conversion</span> of any page
   </h3>
+  <h4 class="text-lg sm:text-2xl text-center tracking-tight text-gray-600 mb-4">
+    {{ data.subtitle }}
+  </h4>
 
-  <div class="grid grid-cols-1 gap-4 lg:grid-cols-6 lg:grid-rows-2">
-    <div v-for="(item, index) of data.items" :key="index" :class="[index < 2 ? 'lg:col-span-3' : 'lg:col-span-2', 'relative']" ref="features-cards">
-      <div
-        :class="[
-          index == 0 ? 'max-md:rounded-t-3xl lg:rounded-tl-3xl' : '',
-          index == 1 ? 'lg:rounded-tr-3xl' : '',
-          index == 2 ? 'lg:rounded-bl-3xl' : '',
-          index == 4 ? 'max-lg:rounded-b-3xl lg:rounded-br-3xl' : '',
-          'relative flex h-full flex-col overflow-hidden rounded-md ring-1 ring-gray-200',
-        ]"
-      >
-        <div v-if="index == 0" class="h-80">
-          <AppShorter :element="featuresCardsRefs?.[index]" :width="width" />
-        </div>
-        <div v-if="index == 1" class="h-80">
-          <AppEnrichment :element="featuresCardsRefs?.[index]" :width="width" />
-        </div>
-        <div v-if="index == 2" class="h-80">
-          <AppSimplicity :element="featuresCardsRefs?.[index]" />
-        </div>
-        <div v-if="index == 3" class="h-80">
-          <AppIntegrations :element="featuresCardsRefs?.[index]" />
-        </div>
-        <div v-if="index == 4" class="h-80">
-          <AppMap :element="featuresCardsRefs?.[index]" />
-        </div>
-        <div class="p-6 sm:p-10 pt-4">
-          <p class="text-lg font-medium text-gray-950">{{ item.title }}</p>
-          <p class="mt-2 text-sm text-gray-600">{{ item.description }}</p>
-        </div>
+  <div class="space-y-8">
+    <div v-for="(item, index) of data.items" :key="index" class="grid grid-cols-2 gap-8 bg-gray-50 p-4 rounded-2xl ring-1 ring-gray-200">
+      <div v-if="index % 2 == 0" class="text-gray-900 p-4 text-lg">
+        <p class="font-semibold text-3xl">{{ item.title }}</p>
+        <p class="text-xl mt-4">{{ item.description }}</p>
+        <ul class="list-disc pl-8 mt-6 text-lg space-y-1">
+          <li v-for="(point, pIndex) of item.items" :key="pIndex">{{ point }}</li>
+        </ul>
+      </div>
+
+      <div v-if="index == 0" class="h-80">
+        <AppShorter :element="featuresCardsRefs?.[index]" :width="width" />
+      </div>
+      <div v-if="index == 1" class="h-80">
+        <AppEnrichment :element="featuresCardsRefs?.[index]" :width="width" />
+      </div>
+      <div v-if="index == 2" class="h-80">
+        <AppSimplicity :element="featuresCardsRefs?.[index]" />
+      </div>
+      <div v-if="index == 3" class="h-80">
+        <AppIntegrations :element="featuresCardsRefs?.[index]" />
+      </div>
+
+      <div v-if="index % 2 != 0" class="text-gray-900 p-4">
+        <p class="font-semibold text-3xl">{{ item.title }}</p>
+        <p class="text-xl mt-4">{{ item.description }}</p>
+        <ul class="list-disc pl-8 mt-6 text-lg space-y-1">
+          <li v-for="(point, pIndex) of item.items" :key="pIndex">{{ point }}</li>
+        </ul>
       </div>
     </div>
   </div>

@@ -1,6 +1,6 @@
 title: Convertedge - Boost conversion of any page!
-subtitle: Simple, no-code installation to automatically shorten and enrich any form.
-logos: Those companies already Increased their conversion rates by 42% in 5 minutes
+subtitle: Simple, no-code solution to automatically shorten and enrich any form fields.
+logos: Join dozens of companies who enjoy higher form conversion rates and lower CPLs
 usecases:
   title: You decide what's <span class='underline'>visible</span> and what's <span class='underline'>automatically enriched</span>
   items:
@@ -16,21 +16,39 @@ usecases:
       icon: calendar-days
 features:
   title: The only purpose-built tool to boost your form conversion rate
+  subtitle: Does not require revops, technical team or integration with any CRM
   items:
     - title: Shorter forms - higher conversion rates
-      description: Lower the barrier by only requiring email and gain up to 42% conversion rates uplift! With more leads and lower CPLs.
-      image: https://tailwindui.com/plus/img/component-images/bento-01-performance.png
-    - title: Automated form enrichment
-      description: Automatically enrich a lead’s data in the background & submitted directly to your CRM. Works seamlessly with no marketing ops needed.
+      description: The less fields the easier it is to fill out a form
+      items:
+        - Gain up to 42% conversion rates uplift
+        - More leads, lower CPLs
+        - Lower the barriers, only email is needed
+    - title: Automated form leads enrichment
+      description: Automatically enrich a lead’s data in the background & submitted directly to your CRM
+      items:
+        - No need for marketing ops
+        - Works seamlessly in the background
+        - Enrich using a huge well known database
     - title: Built with simplicity in mind
-      description: No need for revops, APIs or tech installation. Take a script tag, place it on your tag manager, and that’s it.
-    - title: One tag to shorten & enrich them all
-      description: Hubspot, Marketo, Webflow, Wordpress and more, it works on any form, any CRM. One tag.
-    - title: Real-time reporting
-      description: The insights you want, and those you didn't know you needed.
+      description: No need for revops, no need for APIs or tech installation. Take a pixel, place it on your tag manager, and that’s it.
+      items:
+        - No need for technical implementation
+        - Simple tag manager installation
+        - Takes no longer than 5 minutes
+    - title: Universal. No more tech dependency
+      description: Works on any form type, Hubspot, Marketo, Webflow, Wordpress and the list goes on. One stop shop for shorten and enrich any form, with less than 5 minutes.
+      items:
+        - Technology indifferent - Works on any form
+        - One tag to shorten & enrich them all
+        - Any form, any CRM. One tag
 cta:
-  title: Boost your conversion rate.
-  subtitle: Start using Shortify today!
+  title: Bypass the complexity, focus on results, simple.
+  items:
+    - No ops team required
+    - Simple 5 mins installation with tag manager
+    - Improves form conversion rates up to 42%
+    - Risk free, can stop at any time
   link:
-    label: Get started
+    label: Start free now
     to: https://app.convertedge.co/auth/register
